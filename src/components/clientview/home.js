@@ -1,5 +1,8 @@
 "use client"
 import styles from "../clientview/home.module.css";
+import Image from "next/image";
+
+
 import { FaBehance, FaLinkedin, FaTwitter, FaEnvelope, FaDribbble } from "react-icons/fa";
 
 export default function Hero() {
@@ -71,7 +74,7 @@ export default function Hero() {
       <div className={styles.rightSection}>
         {/* Hero Image */}
         <div className={styles.imageWrapper}>
-          <img src="/Dp.png" alt="designer" className={styles.image} />
+          <Image src="/Dp.png" alt="designer" className={styles.image} />
         </div>
 
         {/* Social Icons (Overlay Right Corner) */}

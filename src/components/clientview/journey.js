@@ -1,5 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+
 
 export default function Journey() {
   const [windowWidth, setWindowWidth] = useState(1200);
@@ -66,7 +68,7 @@ export default function Journey() {
             alignItems: "center",
           }}
         >
-          <img
+          <Image
             src="/webdev.png"
             alt="Web Development"
             style={{

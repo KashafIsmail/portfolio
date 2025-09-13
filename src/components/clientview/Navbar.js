@@ -22,10 +22,10 @@ export default function Navbar() {
         <li><Link href="#skills" onClick={() => setMenuOpen(false)}>Skills</Link></li>
         <li><Link href="#contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
        
-    <a href="/#pricing" className={styles.hireBtn}>
-  Hire me
-</a>
 
+<Link href="/#pricing" className={styles.hireBtn}>
+  Hire me
+</Link>
        
       </ul>
 
