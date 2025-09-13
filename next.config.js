@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ["res.cloudinary.com"],
   },
-  output: "export", // static export ke liye
+
 };
 
 module.exports = nextConfig;
