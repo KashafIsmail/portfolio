@@ -1,0 +1,225 @@
+.container {
+  padding: 20px;
+  color: #fff;
+}
+
+/* ===== FORM ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #2e0033;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form h2 {
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.form input,
+.form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form button {
+  background: #800080;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background: #993399;
+}
+
+.status {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* ===== PROJECT LIST ===== */
+.listHeading {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #fff;
+}
+
+.projectList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectCard {
+  background: #3d003d;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  gap: 10px;
+}
+
+.projectCard h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.projectCard p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.projectCard a {
+  color: #ffccff;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.trash {
+  cursor: pointer;
+  color: #ff4d4d;
+  transition: 0.2s;
+  flex-shrink: 0;
+}
+
+.trash:hover {
+  color: #ff1a1a;
+}
+
+/* ===== MODAL ===== */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.modal {
+  background: #6a0dad;
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.modal h3 {
+  margin-bottom: 10px;
+}
+
+.modalActions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.deleteBtn {
+  background: white;
+  color: #6a0dad;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.deleteBtn:hover {
+  background: #f1f1f1;
+}
+
+.cancelBtn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cancelBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit {
+  cursor: pointer;
+  color: #fbf9ff; /* Purple */
+  transition: 0.2s;
+}
+
+.edit:hover {
+  color: #553c9a;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .form {
+    padding: 15px;
+  }
+
+  .projectCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trash {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .form input,
+  .form textarea,
+  .form button {
+    font-size: 13px;
+  }
+
+  .projectCard p {
+    font-size: 13px;
+  }
+}

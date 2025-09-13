@@ -1,0 +1,87 @@
+.wrap {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+ 
+}
+
+.heading {
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-top: 0%;
+}
+
+.heading span {
+  color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+    background: linear-gradient(135deg, #af00e4, #020202, #8270e9);
+
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 70px #00000060, 0 0 120px #7c3aed22 inset;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width: 350px; /* thodi badi width */
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 80px #00000080, 0 0 140px #7c3aed33 inset;
+}
+
+.thumb {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.content {
+  padding: 18px 18px 22px;
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 6px 18px #00000050;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.9;
+}
+
+.title {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff; /* text white */
+}
+
+.desc {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff; /* text white */
+  line-height: 1.6;
+}

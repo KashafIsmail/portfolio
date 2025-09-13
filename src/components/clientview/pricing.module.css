@@ -1,0 +1,165 @@
+/* pricing.module.css */
+
+.pricingSection {
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.pricingTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  line-height: 1.3;
+}
+
+.pricingContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricingCard {
+  background: #5c5858;
+  min-height: 400px;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.pricingCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+.price {
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.price span {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.list li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.list li::before {
+  content: "◆";
+  color: #a64dff;
+  margin-right: 10px;
+  font-size: 0.85rem;
+}
+
+.btn {
+  background: linear-gradient(90deg, #a64dff, #e91eff);
+  color: #fff;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.popular {
+  border: 2px solid #a64dff;
+  position: relative;
+}
+
+.popularBadge {
+  background: #a64dff;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 1024px) {
+  .pricingTitle {
+    font-size: 1.9rem;
+    margin-bottom: 50px;
+  }
+
+  .pricingCard {
+    padding: 25px 15px;
+  }
+
+  .price {
+    font-size: 1.7rem;
+  }
+
+  .list li {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricingSection {
+    padding: 60px 15px;
+  }
+
+  .pricingTitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .pricingCard {
+    min-height: auto;
+    padding: 20px 15px;
+  }
+
+  .pricingCard h3 {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .list li {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,317 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  color: white;
+  min-height: 90vh;
+  flex-wrap: wrap;
+}
+
+.content {
+  max-width: 50%;
+  margin-top: 60px;
+  margin-left: 100px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #ffffff;
+ 
+}
+
+.title {
+  font-size: 52px;
+  font-weight: bold;
+  margin: 15px 0;
+  line-height: 1.2;
+
+}
+
+.experience {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.sayHello {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.workDemo {
+  background: transparent;
+  border: 2px solid #a855f7;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.clients {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.avatars {
+  display: flex;
+}
+
+.avatars img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around; /* spreads items evenly */
+  align-items: center;           /* vertically center inside container */
+  gap: 50px;                     /* space between items */
+  margin-top: 40px;
+  margin-left: px;
+  border-radius: 10px;
+  border: 3px solid rgb(65, 64, 64);
+  width: 160%;
+  padding: 20px;                 /* padding inside container */
+  box-sizing: border-box;  
+  padding-right: 200px;
+  padding-left: 120px;      /* includes padding in width */
+       /* optional, for contrast */
+}
+
+.stats div {
+  display: flex;                 /* make each stat a flex container */
+  flex-direction: column;        /* stack h2 above p */
+  align-items: center;           /* center content horizontally */
+  text-align: center;            /* center text */
+}
+
+.stats h2 {
+  font-size: 32px;
+  color: white;
+  margin: 0;                     /* remove default margin */
+}
+
+.stats p {
+  font-size: 14px;
+  color: white;
+  margin: 5px 0 0 0; 
+ 
+  white-space: nowrap;  
+}
+
+
+
+/* Right Section */
+.rightSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex: 1;
+}
+
+/* Hero Image */
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 380px;
+  object-fit: cover;
+top: -260px;
+ height: 400px;
+ margin-right: 200px;
+  position: absolute;
+}
+
+/* Social Icons Overlay */
+.socialIcons {
+  position: absolute;
+  right: -20px;  /* image ke side se bahar thoda adjust */
+  top: 200%;
+  place-items: center;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.socialIcons a {
+  color: #7600fd;
+  font-size: 30px;
+  /* position: absolute; */
+
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  place-items: center;
+  font-weight: 800;
+  padding-top: 2.5px;
+  transition: color 0.3s;
+}
+
+.socialIcons a:hover {
+  color: #a855f7;
+}
+
+
+
+/* ---------------- Responsive ---------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 0 40px;
+  }
+
+  .content {
+    margin-left: 50px;
+    max-width: 60%;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .experience {
+    font-size: 16px;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  .sayHello, .workDemo {
+    padding: 10px 24px;
+    font-size: 15px;
+  }
+
+  .stats {
+    gap: 30px;
+    padding: 15px 50px;
+    width: 140%;
+  }
+
+  .stats h2 {
+    font-size: 28px;
+  }
+
+  .stats p {
+    font-size: 13px;
+  }
+
+  .image {
+    width: 320px;
+    height: 350px;
+    top: -200px;
+    margin-right: 100px;
+  }
+
+  .socialIcons {
+    right: -10px;
+    gap: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: auto;
+    padding-top: 50px;
+   position: relative;
+   right: 50px;
+ 
+  }
+
+  .content {
+
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 17px;
+      margin-right: 100px;
+      margin-bottom: 50px;
+    
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-right: 120px;
+
+  }
+
+  .experience {
+    font-size: 12px;
+     margin-right: 120px;
+  }
+  .sayHello, .workDemo {
+    padding: 10px 20px;
+    font-size: 12px;
+    margin-top: 40px;
+  }
+
+  .stats {
+  display: none;
+  }
+
+  .stats h2 {
+    font-size: 24px;
+  }
+
+  .stats p {
+    font-size: 12px;
+  }
+
+  .image {
+    width: 200px;
+    height: 250px;
+    top: -373px;
+left: 60%;
+   
+  margin-right: 0px;
+  }
+
+  .socialIcons {
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    right: 0;
+    top: 20;
+    transform: none;
+  
+  }
+
+ 
+}

@@ -1,0 +1,39 @@
+/* Reset & basics */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+ background: linear-gradient(to right, 
+  #111011,  /* deep purple */
+  #2e003e,  /* very dark purple */
+  #440072,  /* indigo purple */
+  #330363, 
+  #380450, /* royal dark purple */
+  #240046  /* ultra dark violet */
+);
+  font-family: 'Poppins', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Next.js root container */
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content should grow */
+main {
+  flex: 1;
+}
+
+/* Optional link and media fixes */
+a { text-decoration: none; color: inherit; }
+img, video { max-width: 100%; height: auto; }
