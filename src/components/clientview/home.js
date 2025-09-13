@@ -1,6 +1,6 @@
 "use client"
 import styles from "../clientview/home.module.css";
-import { FaBehance, FaLinkedin, FaTwitter, FaEnvelope, FaDribbble } from "react-icons/fa6";
+import { FaBehance, FaLinkedin, FaTwitter, FaEnvelope, FaDribbble } from "react-icons/fa";
 
 export default function Hero() {
   return (
