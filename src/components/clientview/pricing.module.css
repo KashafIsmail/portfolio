@@ -5,6 +5,8 @@
   text-align: center;
   padding: 80px 20px;
   font-family: "Poppins", sans-serif;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 
 .pricingTitle {
@@ -17,7 +19,7 @@
 .pricingContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 60px;
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -26,7 +28,7 @@
 .pricingCard {
   background: #5c5858;
   min-height: 400px;
-  padding: 30px 20px;
+  padding: 10px 20px;
   border-radius: 15px;
   text-align: left;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
@@ -137,7 +139,7 @@
   }
 
   .pricingTitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 40px;
   }
 

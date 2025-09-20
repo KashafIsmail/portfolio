@@ -9,7 +9,7 @@ const PricingPlan = () => {
   return (
     <section id="pricing" className={styles.pricingSection}>
       <h2 className={styles.pricingTitle}>
-        Flexible Pricing for MERN Stack, Firebase <br /> & API Development
+       Flexible Pricing Plans 
       </h2>
 
       <div className={styles.pricingContainer}>

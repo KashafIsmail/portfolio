@@ -1,23 +1,30 @@
+/* Container full screen karne ke liye */
 .wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  width: 100%;           /* Full width */
+  max-width: none;       /* Restriction hatao */
+  margin: 0;             /* Centering ki zaroorat nahi ab */
+  padding: 60px 40px;    /* Left-right thoda breathing space */
+  margin-left: 40px;
+  margin-right: 20px;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Card ko bhi thoda adjust kar do */
 .card {
+  width: 94%; 
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   align-items: center;
   gap: 32px;
   border-radius: 20px;
-  padding: 40px 36px;
+  padding: 60px 50px; /* padding thoda balance */
   background: linear-gradient(135deg, #8a2be2, #000000);
   box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 120px rgba(168, 85, 255, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease forwards;
   opacity: 0;
 }
+
 
 .card:hover {
   transform: translateY(-6px);
@@ -156,5 +163,68 @@
 
   .left p{
     display: none;
+  }
+}
+/* === Tablet (<= 900px) === */
+@media (max-width: 900px) {
+  .wrap {
+    padding: 40px 20px;   /* gap thoda kam */
+    margin: 0;
+  }
+
+  .card {
+    grid-template-columns: 1fr; /* 👈 stack in one column */
+    text-align: center;
+    padding: 30px 24px;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .left h3 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .left p {
+    display: none; /* 👈 text hide tablet aur mobile par */
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .btn {
+    width: 100%;   /* button full width */
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
+/* === Mobile (<= 600px) === */
+@media (max-width: 600px) {
+  .wrap {
+    padding: 25px 15px;  /* aur kam gap */
+  }
+
+  .card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .left h3 {
+    font-size: 22px;   /* heading chhoti */
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 12px;
   }
 }

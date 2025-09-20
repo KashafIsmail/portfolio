@@ -74,7 +74,14 @@ export default function Hero() {
       <div className={styles.rightSection}>
         {/* Hero Image */}
         <div className={styles.imageWrapper}>
-          <Image src="/Dp.png" alt="designer" className={styles.image} />
+         <Image
+  src="/Dp.png"
+  alt="designer"
+  width={400}   // Required
+  height={400}  // Required
+  className={styles.image}
+/>
+
         </div>
 
         {/* Social Icons (Overlay Right Corner) */}

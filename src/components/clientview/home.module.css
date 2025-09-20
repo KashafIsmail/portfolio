@@ -6,12 +6,13 @@
   color: white;
   min-height: 90vh;
   flex-wrap: wrap;
+  margin-right: 36px;
 }
 
 .content {
   max-width: 50%;
   margin-top: 60px;
-  margin-left: 100px;
+  margin-left: 14px;
 }
 
 .subtitle {
@@ -71,6 +72,7 @@
 
 .avatars {
   display: flex;
+  margin-left: 10px;
 }
 
 .avatars img {
@@ -85,16 +87,16 @@
   display: flex;
   justify-content: space-around; /* spreads items evenly */
   align-items: center;           /* vertically center inside container */
-  gap: 50px;                     /* space between items */
+  gap: 20px;                     /* space between items */
   margin-top: 40px;
-  margin-left: px;
+  margin-bottom: 60px;
   border-radius: 10px;
   border: 3px solid rgb(65, 64, 64);
-  width: 160%;
+  width: 201%;
   padding: 20px;                 /* padding inside container */
   box-sizing: border-box;  
   padding-right: 200px;
-  padding-left: 120px;      /* includes padding in width */
+  padding-left: 100px;      /* includes padding in width */
        /* optional, for contrast */
 }
 
@@ -151,7 +153,7 @@ top: -260px;
 .socialIcons {
   position: absolute;
   right: -20px;  /* image ke side se bahar thoda adjust */
-  top: 200%;
+margin-top: 165px;
   place-items: center;
   transform: translateY(-50%);
   display: flex;
@@ -182,136 +184,243 @@ top: -260px;
 }
 
 
-
-/* ---------------- Responsive ---------------- */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero {
-    padding: 0 40px;
-  }
-
-  .content {
-    margin-left: 50px;
-    max-width: 60%;
-  }
-
+/* ---------------- Tablet Styles (Desktop layout, smaller sizes) ---------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
   .title {
-    font-size: 44px;
+    font-size: 40px; /* chhota font */
   }
 
   .experience {
     font-size: 16px;
   }
 
-  .buttons {
-    gap: 12px;
+  .subtitle {
+    font-size: 14px;
   }
 
-  .sayHello, .workDemo {
-    padding: 10px 24px;
-    font-size: 15px;
+  .buttons button {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+
+  .image {
+    width: 300px;
+    height: 300px;
+    margin-right: 100px; /* desktop jaisa but kam spacing */
   }
 
   .stats {
     gap: 30px;
-    padding: 15px 50px;
-    width: 140%;
+    padding: 15px;
+    width: 100%;
   }
 
   .stats h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .stats p {
     font-size: 13px;
   }
 
-  .image {
-    width: 320px;
-    height: 350px;
-    top: -200px;
-    margin-right: 100px;
-  }
-
-  .socialIcons {
-    right: -10px;
-    gap: 15px;
+  .socialIcons a {
+    font-size: 24px;
+    width: 35px;
+    height: 35px;
   }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+/* ---------------- Mobile Styles (full restructure) ---------------- */
+@media (max-width: 767px) {
   .hero {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    min-height: auto;
-    padding-top: 50px;
-   position: relative;
-   right: 50px;
- 
-  }
-
-  .content {
-
-    max-width: 100%;
+    padding: 40px 20px;
+    margin-right: 0;
     text-align: center;
   }
 
-  .title {
-    font-size: 17px;
-      margin-right: 100px;
-      margin-bottom: 50px;
-    
+  /* Image sabse pehle */
+  .rightSection {
+    order: -1; /* image ko top le aayega */
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 
-  .subtitle {
-    font-size: 14px;
-    margin-right: 120px;
-
+  /* Image background circle */
+  .imageWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .experience {
-    font-size: 12px;
-     margin-right: 120px;
-  }
-  .sayHello, .workDemo {
-    padding: 10px 20px;
-    font-size: 12px;
-    margin-top: 40px;
-  }
-
-  .stats {
-  display: none;
-  }
-
-  .stats h2 {
-    font-size: 24px;
-  }
-
-  .stats p {
-    font-size: 12px;
+  .imageWrapper::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #000000, #ec4899);
+    z-index: -1;
   }
 
   .image {
-    width: 200px;
-    height: 250px;
-    top: -373px;
-left: 60%;
-   
-  margin-right: 0px;
-  }
-
-  .socialIcons {
-    flex-direction: row;
-    justify-content: center;
     position: relative;
-    right: 0;
-    top: 20;
-    transform: none;
-  
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    top: 0;
+    margin-top: 20px;
+border-radius: 50%;
+background-color: #ffffff;
   }
 
+.socialIcons {
+  position: absolute;
+  right: -70px;
+  top: 10%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+   
+  padding: 8px;
+  border-radius: 20px;
+}
+
+.socialIcons a {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #ec4899;
+  font-size: 26px;
+  font-weight: 700;
+  padding-bottom: 6px;
+  padding-right: 8px;
+  
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.socialIcons a:hover {
+  background: #ec4899;
+  color: #fff;
+  transform: scale(1.2);   /* ✅ ab pura circle + icon zoom hoga */
+}
+
+
+.socialIcons a:hover {
+  background: #ec4899;   /* hover effect */
+  color: #fff;
+}
+
+
+  /* Content niche */
+  .content {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .experience {
+    font-size: 14px;
+  }
+
+  .subtitle{
  
+    margin-top: 0%;
+  }
+  .sayHello {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.workDemo {
+  background: transparent;
+  border: 2px solid #a855f7;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+  .buttons {
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .clients {
+    justify-content: center;
+  }
+
+ /* ---- Mobile Stats Redesign ---- */
+.stats {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* 2 equal columns */
+  gap: 10px !important; /* yahan se control milega */
+  width: 116% !important; 
+  padding: 0 0 !important;
+  margin: 0px 0!important;
+position: relative;
+right: 8%;
+  border: none !important;
+
+
+}
+
+
+.stats div {
+  flex: unset !important;
+  width: auto !important;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 15px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+
+.stats div:hover {
+  transform: translateY(-4px);
+}
+
+.stats h2 {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+}
+
+.stats p {
+  font-size: 12px;
+  color: #bbb;
+  margin: 0;
+}
 }

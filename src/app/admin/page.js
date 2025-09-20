@@ -18,7 +18,7 @@ export default function AdminPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (email === "admin@example.com" && password === "12345") {
+    if (email === "admin@example.com" && password === "123") {
       sessionStorage.setItem("token", "secure-token");
       setIsLoggedIn(true);
     } else {
